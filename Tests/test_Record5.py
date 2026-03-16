@@ -2,7 +2,7 @@ import os
 from playwright.sync_api import Page, expect
 from Pages.Login_Page import LoginPage
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv(override=True)
 
 
 def test_example(page: Page):
