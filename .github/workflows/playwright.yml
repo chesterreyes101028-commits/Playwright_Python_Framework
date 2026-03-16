@@ -7,14 +7,19 @@ on:
     branches: [ main ]
 
 jobs:
-  playwright-tests:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Playwright browsers
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Playwright dependencies
         run: pip install -r Requirements.txt
 
       - name: Run Playwright tests
