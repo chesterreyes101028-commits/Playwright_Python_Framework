@@ -1,5 +1,4 @@
 {
     "python.analysis.autoImportCompletions": true,
-    "python.terminal.useEnvFile": true,
-    "python.envFile": "./Playwrigjht Python/Test Data/Test Accounts.env"
+    "python.terminal.useEnvFile": true
 }
