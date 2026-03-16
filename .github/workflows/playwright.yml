@@ -20,7 +20,11 @@ jobs:
           python-version: "3.11"
 
       - name: Install Playwright dependencies
-        run: pip install -r Requirements.txt
+        run: |
+            playwright install
+            pip install -r Requirements.txt
 
       - name: Run Playwright tests
         run: pytest Tests
+
+        
